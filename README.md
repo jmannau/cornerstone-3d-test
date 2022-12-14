@@ -1,15 +1,13 @@
-# 🚀 Welcome to your new awesome project!
+# c3d
 
-This project has been created using **webpack-cli**, you can now run
+This is a simple demo app using Cornerstone 3D & WADO Loader
 
-```
-npm run build
-```
+`cd c3d`
+`npm run serve`
 
-or
+# Legacy
 
-```
-yarn build
-```
+This is a simple demo app using Cornerstone-core (Legacy) & WADO Loader
 
-to bundle your application
+`cd legacy`
+`npm run serve`
