@@ -7,6 +7,16 @@ import * as dicomParser from "dicom-parser";
 cornerstoneWadoImageLoader.external.cornerstone = cornerstone;
 cornerstoneWadoImageLoader.external.dicomParser = dicomParser;
 
+cornerstoneWadoImageLoader.configure({
+  useWebWorkers: true,
+  /**
+   * Required for Cornerstone 3D
+   */
+  decodeConfig: {
+    convertFloatPixelDataToInt: false,
+  },
+});
+
 cornerstone.metaData.addProvider((type, imageId) => {
   const parsedImageId =
     cornerstoneWadoImageLoader.wadouri.parseImageId(imageId);
